@@ -2,6 +2,7 @@ package com.springcore.ci;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 //
 public class App_Test {
 
@@ -10,6 +11,9 @@ public class App_Test {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/ci/ciconfig.xml");
 		Person p = (Person) context.getBean("person");
 		System.out.println(p);
+
+		Addition a = (Addition) context.getBean("add");
+		a.doSum();
 	}
 
 }
