@@ -15,6 +15,11 @@ public class Test_LifeCycle {
 		 * AbstractApplicationContext
 		 */
 		context.registerShutdownHook();
+
+		System.out.println("****************************");
+
+		Pepsi pepsi = (Pepsi) context.getBean("pepsi");
+		System.out.println(pepsi);
 	}
 
 }
