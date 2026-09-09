@@ -20,6 +20,12 @@ public class Test_LifeCycle {
 
 		Pepsi pepsi = (Pepsi) context.getBean("pepsi");
 		System.out.println(pepsi);
+
+		System.out.println("**********Using Annotation Implmenting Bean Life Cycle*********");
+		System.out.println("!!Post Contruct & Pre Destroy!!");
+
+		Example example = (Example)context.getBean("example");
+		System.out.println(example);
 	}
 
 }
