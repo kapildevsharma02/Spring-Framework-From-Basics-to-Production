@@ -16,11 +16,18 @@ public class App {
 		// Spring jdbc=>jdbcTemplate
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
 		StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
+//		Student student = new Student();
+//		student.setId(777);
+//		student.setName("karina");
+//		student.setCity("Lucknow");
+//		int result = studentDao.insert(student);
+//		System.out.println("student added " + result);
+		// udpate
 		Student student = new Student();
-		student.setId(777);
-		student.setName("karina");
+		student.setId(245);
+		student.setName("Raj Kumar");
 		student.setCity("Lucknow");
-		int result = studentDao.insert(student);
-		System.out.println("student added " + result);
+		int result=studentDao.change(student);
+		System.out.println("Data changed "+result);
 	}
 }
