@@ -16,6 +16,7 @@ public class App {
 		// Spring jdbc=>jdbcTemplate
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc/config.xml");
 		StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
+		
 		// Note all comments here given below is correct
 		// Insert
 //		Student student = new Student();
